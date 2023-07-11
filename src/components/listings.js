@@ -7,17 +7,16 @@ const Listings = () => {
   const [pageNumber] = useState(1);
   const [isFetching, setIsFetching] = useState(false);
 
-  const fetchDataAsync = async () => {
-    setIsFetching(true);
-    const { data } = await fetchData(`/listings`, { params: { pageNumber } });
-    const { docs } = data;
-    setData([...docs]);
-    setIsFetching(false);
-  };
-
   useEffect(() => {
+    const fetchDataAsync = async () => {
+      setIsFetching(true);
+      const { data } = await fetchData(`/listings`, { params: { pageNumber } });
+      const { docs } = data;
+      setData([...docs]);
+      setIsFetching(false);
+    };
     void fetchDataAsync();
-  }, []);
+  }, [pageNumber]);
 
   return (
     <section className="mx-6 md:mx-10 min-[1440px]:mx-20 pt-6">
