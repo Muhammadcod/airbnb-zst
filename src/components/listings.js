@@ -22,7 +22,7 @@ const Listings = () => {
   }, [pageNumber]);
 
   return (
-    <section className="mx-6 md:mx-10 min-[1440px]:mx-20 pt-6">
+    <section className="mx-6 md:mx-10 min-[1440px]:mx-20 pt-6 pb-20">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 min-[1640px]:grid-cols-5 gap-6 ">
         {isFetching ? (
           <PlaceholderCard dataLimit={pageLimit} />
