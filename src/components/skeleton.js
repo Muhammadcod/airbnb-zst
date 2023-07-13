@@ -1,7 +1,7 @@
-import Placeholders from "./placeholders";
+import PlaceholderCard from "./placeholder-card";
 
 function Skeleton({ children, isFetching }) {
-  return isFetching ? <Placeholders /> : <>{children}</>;
+  return isFetching ? <PlaceholderCard /> : <>{children}</>;
 }
 
 export default Skeleton;

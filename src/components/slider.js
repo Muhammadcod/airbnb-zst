@@ -45,7 +45,7 @@ const Slider = () => {
   return (
     <div ref={containerRef} className="flex-1 w-96 h-full relative">
       {hasPrev && (
-        <div className=" absolute z-10 top-0 bg-white h-full items-center left-0 hidden min-[740px]:flex ">
+        <div className=" absolute z-10 top-0 bg-white h-full items-center left-0 hidden min-[744px]:flex ">
           <button
             className={clsx("hover:drop-shadow-lg", buttonClass)}
             onClick={() => handlePrev()}
@@ -54,7 +54,7 @@ const Slider = () => {
           </button>
         </div>
       )}
-      <div className="flex h-full items-center overflow-x-auto min-[740px]:overflow-x-hidden ">
+      <div className="flex h-full items-center overflow-x-auto min-[744px]:overflow-x-hidden ">
         {FILTERS.map((item, index) => (
           <FilterItem
             key={index}
@@ -67,7 +67,7 @@ const Slider = () => {
         ))}
       </div>
       {hasNext && (
-        <div className=" absolute z-10 right-0 top-0 bg-white h-full items-center hidden min-[740px]:flex ">
+        <div className=" absolute z-10 right-0 top-0 bg-white h-full items-center hidden min-[744px]:flex ">
           <button
             className={clsx(" hover:drop-shadow-lg", buttonClass)}
             onClick={() => handleNext()}
